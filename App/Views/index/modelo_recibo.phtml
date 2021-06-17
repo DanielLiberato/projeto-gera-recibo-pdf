@@ -1,0 +1,166 @@
+<html>
+<head>
+   <style>
+      body {
+  padding: 30px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.valor{
+  display: inline-block;
+  margin-left: auto;
+}
+
+.receipt-main {
+  display: inline-block;
+  width: 100%;
+  padding: 15px;
+  font-size: 12px;
+  border: 1px solid #000;
+}
+
+.receipt-title {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+}
+  
+.receipt-label {
+  font-weight: 600;
+}
+
+.text-large {
+  font-size: 16px;
+}
+
+.receipt-section {
+  margin-top: 10px;
+}
+
+.receipt-footer {
+  text-align: center;
+  background: #ff0000;
+}
+
+.receipt-signature {
+  height: 80px;
+  margin: 50px 0;
+  padding: 0 50px;
+  background: #fff;
+  
+  
+}
+
+.receipt-signature.receipt-line {
+    margin-bottom: 10px;
+    border: 1px solid #000;
+  }
+  
+  p {
+    text-align: center;
+    margin: 0;
+  }
+   </style>
+</head>
+<body>
+
+
+<div class="receipt-main">
+  
+  <p class="receipt-title">Recibo</p>
+
+  <div class="receipt-section pull-left">
+    <span class="receipt-label text-large">1ªVia</span>
+  </div>
+  
+  
+  <div class="pull-right receipt-section">
+    <span class="text-large receipt-label">R$</span>
+    <span class="text-large"><?php echo $_POST["valor"]; ?></span>
+  </div>
+  
+  <div class="clearfix"></div>
+  
+  <div class="receipt-section">
+    <span class="receipt-label">Pagador:</span>
+    <span><?php echo $_POST["nomePagador"]; ?> (CPF/CNPJ: <?php echo $_POST["cpfCnpjPagador"]; ?>)</span>
+  </div>
+  
+  <div class="receipt-section">
+    <span class="receipt-label">Responsável (Emissor):</span>
+    <span><?php echo $_POST["nomeEmissor"]; ?>  (CPF/CNPJ: <?php echo $_POST["cpfCnpjEmissor"]; ?>)</span>
+  </div>
+  
+  <div class="receipt-section">
+    <p>Recebi de <?php echo $_POST["nomePagador"]; ?>  a importância de <?php echo $_POST["valor"]; ?> reais</p>
+    <p>Referente a <?php echo $_POST["referenteServico"]; ?> </p>
+  </div>
+  
+  <div class="receipt-section">
+    <p class="pull-right text-large"><?php echo $_POST["city"]; ?>, <?php echo $_POST["date"]; ?></p>
+  </div>
+  
+  <div class="clearfix"></div>
+
+  <div class="receipt-signature col-xs-6">
+    <p class="receipt-line"></p>
+    <p><?php echo $_POST["nomeEmissor"]; ?></p>
+    <p><?php echo $_POST["cpfCnpjEmissor"]; ?></p>
+  </div>
+</div>
+
+<br>  <br> <br>
+
+
+<div class="receipt-main">
+  
+  <p class="receipt-title">Recibo</p>
+
+  <div class="receipt-section pull-left">
+    <span class="receipt-label text-large">2ªVia</span>
+  </div>
+  
+  
+  <div class="pull-right receipt-section">
+    <span class="text-large receipt-label">R$</span>
+    <span class="text-large"><?php echo $_POST["valor"]; ?></span>
+  </div>
+  
+  <div class="clearfix"></div>
+  
+  <div class="receipt-section">
+    <span class="receipt-label">Pagador:</span>
+    <span><?php echo $_POST["nomePagador"]; ?> (CPF/CNPJ: <?php echo $_POST["cpfCnpjPagador"]; ?>)</span>
+  </div>
+  
+  <div class="receipt-section">
+    <span class="receipt-label">Responsável (Emissor):</span>
+    <span><?php echo $_POST["nomeEmissor"]; ?>  (CPF/CNPJ: <?php echo $_POST["cpfCnpjEmissor"]; ?>)</span>
+  </div>
+  
+  <div class="receipt-section">
+    <p>Recebi de <?php echo $_POST["nomePagador"]; ?>  a importância de <?php echo $_POST["valor"]; ?> reais</p>
+    <p>Referente a <?php echo $_POST["referenteServico"]; ?> </p>
+  </div>
+  
+  <div class="receipt-section">
+    <p class="pull-right text-large"><?php echo $_POST["city"]; ?>, <?php echo $_POST["date"]; ?></p>
+  </div>
+  
+  <div class="clearfix"></div>
+
+  <div class="receipt-signature col-xs-6">
+    <p class="receipt-line"></p>
+    <p><?php echo $_POST["nomeEmissor"]; ?></p>
+    <p><?php echo $_POST["cpfCnpjEmissor"]; ?></p>
+  </div>
+</div>
+</body>
+</html>

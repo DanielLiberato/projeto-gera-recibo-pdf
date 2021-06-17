@@ -1,0 +1,96 @@
+<header>
+<nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Gerador de Recibo</a>
+    </nav>
+</header>
+<main class="container mt-5 mb-5">
+        <div class="row border rounded">
+            <div class="col-md-12 text-dark mt-4">
+                <h3>Recibo Simples:</h3>
+                <small>**Preencha todos os dados para geramos seu Recibo automaticamente</small> 
+                </br>
+                <form method="post" action="/recibo-simples" target="_blank" class="mt-4">
+                    <div class="row">
+
+                        <div class="col-md-3"> 
+                            <div class="form-group">
+								<label>Valor</label>
+								<input type="text" name='valor' id="VALOR" class="form-control" required>
+						    </div>
+						</div>
+
+						<div class="col-sm-12 col-md-12 ">
+							<div class="form-group">
+									<label>Nome/Rasão Social do Pagador</label>
+										<input type="text" name='nomePagador' class="form-control" required>
+							</div>
+									<div class="row">
+                                        <div class="col-sm-12 col-md-6 ">
+                                        <div class="form-group">
+                                            <label>CPF/CNPJ (Pagador)</label>
+                                            <input type="text" name='cpfCnpjPagador' class="form-control CPF_CNPJ" required>
+                                        </div>
+                                        </div>
+                                        
+                                        <div class="col-sm-12 col-md-3 ">
+                                        <div class="form-group">
+                                            <label>Cidade:</label>
+                                            <input type="text"  name="city" class="form-control" required>
+                                        </div>
+                                        </div>
+                                        <div class="col-sm-12 col-md-3 ">
+                                        <div class="form-group">
+                                            <label>Data de Recebimento:</label>
+                                            <input type="text" name="date" id="DATE" class="form-control" required>
+                                        </div>
+                                        </div>
+									</div>
+                                    <div class="row">
+                                        <div class="col-sm-12 col ">
+                                        <div class="form-group">
+                                            <label>Referente a :</label>
+                                            <input type="text" name='referenteServico' class="form-control" placeholder="Ex: Serviço de Pintura" required>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="row">
+                                        <div class="col-sm-12 col ">
+                                        <div class="form-group">
+                                            <label>Nome/Rasão Social (Emissor):</label>
+                                            <input type="text" name='nomeEmissor' class="form-control" required>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 col-sm-12">
+                                        <div class="form-group">
+                                            <label>Telefone (Emissor):</label>
+                                            <input type="text" id="PHONE" name='phone' class="form-control" required>
+                                        </div>
+                                        </div>
+                                        
+                                        <div class="col-sm-12 col-md-6 ">
+                                        <div class="form-group">
+                                            <label>CPF/CNPJ (Emissor):</label>
+                                            <input type="text"  name="cpfCnpjEmissor" class="form-control CPF_CNPJ" required>
+                                        </div>
+                                        </div>
+									</div>
+							<button class="btn btn-outline-primary" type='submit'>Gerar Recibo</button>
+								</form>
+            </div>
+        </div>
+    </div>
+</main>
+<footer class="bg-dark">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 text-light text-center mt-4">
+                <p>Copyright &copy Todos os Direitos Reservados-2021</p>
+                <p>Desenvolvido por Daniel Liberato da Silva</p>
+                <p>Desenvolvedor Web</p>
+            </div>
+        </div>
+    </div>
+</footer>
