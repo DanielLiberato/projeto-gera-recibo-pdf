@@ -4,4 +4,4 @@ Fiz um pequeno projeto para criar um recibo simples automaticamente em pdf , uti
 
 #Instalação
 
-basta baixar o projeto instalar as dependencias com o comando **composer install** e executar o servidor web na pasta APP/public.
+basta baixar o projeto instalar as dependencias com o comando **composer install** e executar o servidor web na pasta /public.
